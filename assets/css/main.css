@@ -3459,6 +3459,91 @@
 	}
 
 /* Menu */
+#bname{
+	margin-inline:auto;
+}
+  #h2 {
+    font-family: 'Arial', sans-serif;
+	font-size: large;
+    color: #ff4b5c;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 4px;
+    text-shadow:
+      0 0 5px #ff4b5c,
+      0 0 10px #ff4b5c,
+      0 0 20px #ff4b5c,
+      0 0 40px #ff4b5c,
+      0 0 80px #ff4b5c;
+
+    animation: neon 1.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes neon {
+    0% {
+      text-shadow:
+        0 0 5px #ff4b5c,
+        0 0 10px #ff4b5c,
+        0 0 20px #ff4b5c,
+        0 0 40px #ff4b5c,
+        0 0 80px #ff4b5c;
+    }
+    50% {
+      text-shadow:
+        0 0 10px #ff4b5c,
+        0 0 20px #ff6b7c,
+        0 0 30px #ff6b7c,
+        0 0 50px #ff7b8c,
+        0 0 100px #ff8b9c;
+    }
+    100% {
+      text-shadow:
+        0 0 5px #ff4b5c,
+        0 0 10px #ff4b5c,
+        0 0 20px #ff4b5c,
+        0 0 40px #ff4b5c,
+        0 0 80px #ff4b5c;
+    }
+  }
+
+#running{
+
+  width: 150px;
+  position: relative; /* required for left/top movement */
+  animation: moveGif 3s infinite linear;
+}
+
+/* Define keyframes */
+@keyframes moveGif {
+  0% {
+    transform: translateX(0)
+  }
+  50% {
+    transform: translateX(-150%) 
+  }
+  100% {
+    transform: translateX(-300%) 
+  }
+}
+
+
+#toGallery{
+	margin-top: 50px;
+	transition: all 0.3s ease;
+	animation: gallery 2s ease-in-out 0s infinite normal forwards;
+}
+@keyframes gallery {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+     transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .gallery {
   width: 250px;
   aspect-ratio: 1.5/2;
